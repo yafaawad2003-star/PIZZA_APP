@@ -147,3 +147,37 @@ button:hover {
 ul {
   padding-left: 20px;
 }
+
+.app {
+  background: linear-gradient(180deg, #fff7ed 0%, #f2f2f2 100%);
+}
+
+h1 {
+  color: #b83227;
+  letter-spacing: 1px;
+}
+
+.card {
+  border-top: 5px solid #d9480f;
+}
+
+button {
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.menu-box {
+  border-left: 4px solid #d9480f;
+}
+
+.success {
+  font-weight: bold;
+}
+
+.order-card h3 {
+  color: #b83227;
+}
