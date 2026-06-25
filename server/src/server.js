@@ -24,7 +24,9 @@ const menu = {
         { id: "mushrooms", name: "Mushrooms", price: 4 },
         { id: "corn", name: "Corn", price: 4 },
         { id: "onion", name: "Onion", price: 4.5 },
-        { id: "extra_cheese", name: "Extra Cheese", price: 3.5 }
+        { id: "extra_cheese", name: "Extra Cheese", price: 3.5 },
+        { id: "bacon", name: "Bacon", price: 6 },
+        { id: "tuna", name: "Tuna", price: 5.5 }
     ]
 };
 
