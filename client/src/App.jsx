@@ -102,6 +102,11 @@ function App() {
     setSelectedToppings([]);
   }
 
+  function clearCart() {
+    setCart([]);
+    setSelectedToppings([]);
+  }
+
   function removeFromCart(indexToRemove) {
     setCart(cart.filter((item, index) => index !== indexToRemove));
   }
@@ -159,6 +164,7 @@ function App() {
 
       setConfirmation(data);
       setCart([]);
+      setSelectedToppings([]);
       setCustomerName("");
       setPhone("");
       setDeliveryAddress("");
@@ -272,26 +278,32 @@ function App() {
           <h3>Menu</h3>
 
           <div className="menu-box">
-            <h4>Pizzas</h4>
-            {menu.pizzas.map((pizza) => (
-              <p key={pizza.id}>
-                {pizza.name} - {pizza.price} ₪
-              </p>
-            ))}
+            <div>
+              <h4>Pizzas</h4>
+              {menu.pizzas.map((pizza) => (
+                <p key={pizza.id}>
+                  {pizza.name} - {pizza.price} ₪
+                </p>
+              ))}
+            </div>
 
-            <h4>Sizes</h4>
-            {menu.sizes.map((size) => (
-              <p key={size.id}>
-                {size.name} - {size.price} ₪
-              </p>
-            ))}
+            <div>
+              <h4>Sizes</h4>
+              {menu.sizes.map((size) => (
+                <p key={size.id}>
+                  {size.name} - {size.price} ₪
+                </p>
+              ))}
+            </div>
 
-            <h4>Toppings</h4>
-            {menu.toppings.map((topping) => (
-              <p key={topping.id}>
-                {topping.name} - {topping.price} ₪
-              </p>
-            ))}
+            <div>
+              <h4>Toppings</h4>
+              {menu.toppings.map((topping) => (
+                <p key={topping.id}>
+                  {topping.name} - {topping.price} ₪
+                </p>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -333,7 +345,17 @@ function App() {
           ))}
         </div>
 
-        <button onClick={addPizzaToCart}>Add Pizza To Cart</button>
+        <div className="cart-buttons">
+          <button onClick={addPizzaToCart}>
+            Add Pizza To Cart
+          </button>
+
+          {cart.length > 0 && (
+            <button className="clear-button" onClick={clearCart}>
+              Clear Cart
+            </button>
+          )}
+        </div>
 
         <div data-testid="cart" className="cart">
           <h3>Cart</h3>

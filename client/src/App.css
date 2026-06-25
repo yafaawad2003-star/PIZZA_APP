@@ -181,3 +181,15 @@ button:hover {
 .order-card h3 {
   color: #b83227;
 }
+
+.cart-buttons {
+  margin-top: 15px;
+}
+
+.clear-button {
+  background-color: #777;
+}
+
+.clear-button:hover {
+  background-color: #555;
+}
